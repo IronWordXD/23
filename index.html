@@ -1,0 +1,231 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head> 
+<body onLoad="MM_preloadImages('1.jpg')"> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Operaciones</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+        <center>
+        <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('jpg','','1.jpg',1)"><img src="1.jpg" width="400" height="300" id="1.jpg"></a></center>
+            <li><a href="#page2">Suma</a></li>
+            <li><a href="#page3">Resta</a></li>
+			<li><a href="#page4">Multiplicacion</a></li>
+            <li><a href="#page5">Divicion</a></li>
+            <li><a href="#page6">Potencia</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Alfa 1.0</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Suma</h1>
+	</div>
+	<div data-role="content">
+    <link rel='stylesheet' href='Estilos.css'>
+        <script language="javascript">
+		function calcula(){
+	var a, b, resultado;
+   a=parseFloat(form1.no1.value);
+   b=parseFloat(form1.no2.value);	
+   
+   resultado=a+b;
+	 form1.res.value=resultado;
+	 }
+	form1.res.value=resultado;
+       </script>
+     <body>
+		<form name="form1">
+		<div><label>numero 1:</label><input type="text" name="no1"></div><p>
+		<div><label>numero 2:</label><input type="text" name="no2"></div><p>
+                        
+	    <div><input type="button" value="resultado" onClick="calcula()"></div><p>
+		<input type="text" name="res">
+             
+		</form> 
+         <a href="#page"><button>Volver</button></a>
+</body> 
+	
+	</div>
+	<div data-role="footer">
+		<h4>Fin</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Resta</h1>
+	</div>
+	<div data-role="content">
+    <link rel='stylesheet' href='Estilos.css'>	
+		 <script language="javascript">
+		function calcula(){
+	var a, b, resultado;
+   a=parseFloat(form2.no1.value);
+   b=parseFloat(form2.no2.value);	
+   
+   resultado=a-b;
+	 form2.res.value=resultado;
+	 }
+	form2.res.value=resultado;
+       </script>
+     <body>
+		<form name="form2">
+		<div><label>numero 1:</label><input type="text" name="no1"></div><p>
+		<div><label>numero 2:</label><input type="text" name="no2"></div><p>
+                        
+	    <div><input type="button" value="resultado" onClick="calcula()"></div><p>
+		<input type="text" name="res">
+             
+		</form> 
+        <a href="#page"><button>Volver</button></a>
+</body>		
+	</div>
+	<div data-role="footer">
+		<h4>Fin</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Multiplicacion</h1>
+	</div>
+	<div data-role="content">	
+    <link rel='stylesheet' href='Estilos.css'>
+<script language="javascript">
+		function calcula(){
+	var a, b, resultado;
+   a=parseFloat(form3.no1.value);
+   b=parseFloat(form3.no2.value);	
+   
+   resultado=a*b;
+	 form3.res.value=resultado;
+	 }
+	form3.res.value=resultado;
+       </script>
+     <body>
+		<form name="form3">
+		<div><label>numero 1:</label><input type="text" name="no1"></div><p>
+		<div><label>numero 2:</label><input type="text" name="no2"></div><p>
+                        
+	    <div><input type="button" value="resultado" onClick="calcula()"></div><p>
+		<input type="text" name="res">
+             
+		</form> 
+        <a href="#page"><button>Volver</button></a>
+</body>
+	</div>
+<div data-role="footer">
+		<h4>Fin</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="page5">
+<div data-role="header">
+		<h1>Divicion</h1>
+	</div>
+	<div data-role="content">
+    <link rel='stylesheet' href='Estilos.css'>	
+		<script language="javascript">
+		function calcula(){
+	var a, b, resultado;
+   a=parseFloat(form4.no1.value);
+   b=parseFloat(form4.no2.value);	
+   
+   resultado=a/b;
+	 form4.res.value=resultado;
+	 }
+	form4.res.value=resultado;
+       </script>
+     <body>
+		<form name="form4">
+		<div><label>numero 1:</label><input type="text" name="no1"></div><p>
+		<div><label>numero 2:</label><input type="text" name="no2"></div><p>
+                        
+	    <div><input type="button" value="resultado" onClick="calcula()"></div><p>
+		<input type="text" name="res">
+             
+		</form> 
+        <a href="#page"><button>Volver</button></a>
+</body>		
+	</div>
+	<div data-role="footer">
+		<h4>Fin</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="page6">
+	<div data-role="header">
+		<h1>POTENCIA</h1>
+	</div>
+	<div data-role="content">	
+    <link rel='stylesheet' href='Estilos.css'>
+<script language="javascript">
+		function calcula(){
+	var a, b, resultado;
+   a=parseFloat(form5.no1.value);
+   b=parseFloat(form5.no2.value);	
+   
+   resultado=Math.pow(a,b);
+	 form5.res.value=resultado;
+	 }
+	form5.res.value=resultado;
+       </script>
+     <body>
+		<form name="form5">
+		<div><label>numero 1:</label><input type="text" name="no1"></div><p>
+		<div><label>numero 2:</label><input type="text" name="no2"></div><p>
+                        
+	    <div><input type="button" value="resultado" onClick="calcula()"></div><p>
+		<input type="text" name="res">
+             
+		</form> 
+        <a href="#page"><button>Volver</button></a>
+</body>		
+	</div>
+	<div data-role="footer">
+		<h4>Fin</h4>
+	</div>
+</div>
+
+
+
+</body>
+</html>
