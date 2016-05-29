@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="file:///C|/Program%20Files%20(x86)/Dreamweaver/App/Dreamweaver/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="file:///C|/Program%20Files%20(x86)/Dreamweaver/App/Dreamweaver/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="file:///C|/Program%20Files%20(x86)/Dreamweaver/App/Dreamweaver/es_ES/Configuration/Third%20Party%20Source%20Code/jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head>
+<img src="../1.jpg" width="400" height="300" id="1.jpg"> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Alfa v1.0</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">OPERACIONES</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Nada</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1></h1>
+	</div>
+	<div data-role="content">	
+		<link rel='stylesheet' href='file:///F|/daw/Estilos.css'>
+        <script language="javascript">
+		function calcula(){
+	var a, b, c, resultado;
+   a=parseFloat(form1.no1.value);
+   b=parseFloat(form1.no2.value);
+   c=parseInt(form1.ope.value);
+   
+   switch(c){
+	case 1:
+	 resultado=a+b;
+	 form1.res.value=resultado;
+    break;
+    case 2:
+	 resultado=a-b;
+	 form1.res.value=resultado;
+    break;
+    case 3:
+	 resultado=a*b;
+	 form1.res.value=resultado;
+	break;
+	case 4:
+	 resultado=a/b;
+	 form1.res.value=resultado;
+    break;
+    case 5:
+     resultado=Math.pow(a,b);
+	 form1.res.value=resultado;
+    break;
+   }
+	form1.res.value=resultado;
+}
+ </script>
+	</head>
+
+	<body>
+		<center><h1>Calculadora PRO <h1><p>
+			<form name="form1">
+				<div><label>Numero 1:</label><input type="text" name="no1"></div><p>
+					<div><label>Numero 2:</label><input type="text" name="no2"></div><p>
+						<div><label><select name="ope"></label>
+							<label><option value="1">Suma</option></label>
+							<label><option value="2">Resta</option></label>
+							<label><option value="3">Multiplicacion</option></label>
+							<label><option value="4">Division</option></label>
+                            <label><option value="5">Potencia</option></label>
+						</div><p>
+					<div><input type="button" value="==Resultado==" onClick="calcula()"></div><p>
+				<input type="text" name="res">
+			</form>	
+            <a href="#page"><button>Regresar</button></a>	
+	</div>
+	<div data-role="footer">
+		<h4></h4>
+	</div>
+</div>
+
+</body>
+</html>
